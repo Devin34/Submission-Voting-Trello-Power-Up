@@ -5,7 +5,7 @@ var t = TrelloPowerUp.iframe();
 window.scoreform.addEventListener("submit", function (event) {
   event.preventDefault();
   return t
-    .set("card", "shared", "scoreform", window.scoreselect.value)
+    .set("card", "shared", "score", window.scoreselect.value)
     .then(function () {
       t.closePopup();
     });
@@ -14,9 +14,9 @@ window.scoreform.addEventListener("submit", function (event) {
 t.render(function () {
 
   return t
-    .get("card", "shared", "scoreform")
-    .then(function (score) {
-      window.scoreselect.value = score;
+    .get("card", "shared", "score")
+    .then(function (data) {
+      window.scoreselect.value = data;
     })
     .then(function () {
       t.sizeTo("#scoreform").done();
