@@ -16,11 +16,11 @@ window.scoreForm.addEventListener("submit", function (event) {
 
 t.render(function () {
   return t
-    .get("card", "shared", "scoreFrom")
+    .get("card", "shared", "scoreForm")
     .then(function (scoreForm) {
       window.scoreSelect.value = scoreForm;
     })
     .then(function () {
-      t.sizeTo("#estimate").done();
+      t.sizeTo("#scorForm").done();
     });
 })
