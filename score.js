@@ -1,7 +1,7 @@
 /* global TrelloPowerUp */
 
 var t = TrelloPowerUp.iframe();
-var cardname = t.card("name");
+var cardname = t.card("id");
 
 window.scoreform.addEventListener("submit", function (event) {
   event.preventDefault();
