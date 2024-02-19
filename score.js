@@ -1,4 +1,4 @@
-ar t = TrelloPowerUp.iframe();
+var t = TrelloPowerUp.iframe();
 
 window.estimate.addEventListener("submit", function (event) {
   event.preventDefault();
