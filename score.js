@@ -1,3 +1,5 @@
+/* global TrelloPowerUp */
+
 var t = TrelloPowerUp.iframe();
 
 window.estimate.addEventListener("submit", function (event) {
