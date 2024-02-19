@@ -5,7 +5,10 @@ var t = TrelloPowerUp.iframe();
 window.estimate.addEventListener("submit", function (event) {
   event.preventDefault();
   return t
-    .set("card", "shared", "estimate", window.estimateSize.value)
+
+
+
+    .set("card", "shared", "scoreForm", window.scoreSelect.value)
     .then(function () {
       t.closePopup();
     });
@@ -13,9 +16,9 @@ window.estimate.addEventListener("submit", function (event) {
 
 t.render(function () {
   return t
-    .get("card", "shared", "estimate")
-    .then(function (estimate) {
-      window.estimateSize.value = estimate;
+    .get("card", "shared", "scoreFrom")
+    .then(function (scoreForm) {
+      window.scoreSelect.value = scoreForm;
     })
     .then(function () {
       t.sizeTo("#estimate").done();
