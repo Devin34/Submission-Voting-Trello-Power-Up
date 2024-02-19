@@ -15,8 +15,8 @@ t.render(function () {
 
   return t
     .get("card", "shared", "scoreform")
-    .then(function (scoreform) {
-      window.scoreselect.value = scoreform;
+    .then(function (score) {
+      window.scoreselect.value = score;
     })
     .then(function () {
       t.sizeTo("#scoreform").done();
