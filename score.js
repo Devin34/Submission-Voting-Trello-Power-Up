@@ -2,15 +2,24 @@
 
 var t = TrelloPowerUp.iframe();
 
-window.scoreForm.addEventListener("submit", function (event) {
+window.score-form.addEventListener("submit", function (event) {
   event.preventDefault();
   return t
-    .set("card", "shared", "scoreForm", window.scoreForm.value)
+    .set("card", "shared", "score-form", window.score.value)
     .then(function () {
       t.closePopup();
     });
 });
 
 t.render(function () {
-  t.sizeTo("#scoreForm").done();
+
+  return t
+    .get("card", "shared", "score-form")
+    .then(function (score) {
+      window.score.value = score;
+    })
+    .then(function () {
+      t.sizeTo("#estimate").done();
+    });
+
 });
