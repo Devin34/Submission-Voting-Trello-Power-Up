@@ -17,7 +17,7 @@ t.render(function () {
   return t
     .card("id")
     .then(function(cardidvalue) {
-      console.log(cardidvalue);
+      console.log(JSON.stringify(cardidvalue.id));
     })
     .get("member", "shared", "score")
     .then(function (score) {
