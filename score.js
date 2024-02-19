@@ -2,10 +2,10 @@
 
 var t = TrelloPowerUp.iframe();
 
-window.score-form.addEventListener("submit", function (event) {
+window.scoreform.addEventListener("submit", function (event) {
   event.preventDefault();
   return t
-    .set("card", "shared", "score-form", window.score.value)
+    .set("card", "shared", "scoreform", window.score.value)
     .then(function () {
       t.closePopup();
     });
@@ -14,12 +14,12 @@ window.score-form.addEventListener("submit", function (event) {
 t.render(function () {
 
   return t
-    .get("card", "shared", "score-form")
+    .get("card", "shared", "scoreform")
     .then(function (score) {
       window.score.value = score;
     })
     .then(function () {
-      t.sizeTo("#score-form").done();
+      t.sizeTo("#scoreform").done();
     });
 
 });
