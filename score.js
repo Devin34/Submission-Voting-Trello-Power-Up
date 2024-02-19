@@ -2,7 +2,7 @@
 
 var t = TrelloPowerUp.iframe();
 
-window.estimate.addEventListener("submit", function (event) {
+window.scoreForm.addEventListener("submit", function (event) {
   event.preventDefault();
   return t
 
