@@ -7,21 +7,24 @@
 
 <body>
   <script src="https://p.trellocdn.com/power-up.min.js"></script>
-  <script>
-    TrelloPowerUp.initialize({
-      // Start adding handlers for your capabilities here!
-      'card-buttons': function (t, options) {
-        return [
-          {
-            icon: "https://i.ibb.co/6sbknH0/logo-stroke-32pt-style-2-no-stroke.png",
-            text: 'Hello World!',
-            callback: function (t) {
-              return t.card().then((card) => alert("hello world!"))
-            }
-          }
-        ];
-      },
-    });
-  </script>
+    <script>
+      TrelloPowerUp.initialize({
+        // Start adding handlers for your capabilities here!
+        'card-buttons': function (t, options) {
+          return [
+            {
+              icon: "https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421",
+              text: "Estimate Size",
+              callback: function (t) {
+                return t.popup({
+              title: "Estimation",
+              url: "score.html",
+              });
+            },
+          },
+          ];
+        },
+      });
+    </script>
 </body>
 </html>
