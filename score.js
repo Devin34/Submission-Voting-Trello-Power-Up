@@ -19,7 +19,7 @@ t.render(function () {
       window.score.value = score;
     })
     .then(function () {
-      t.sizeTo("#estimate").done();
+      t.sizeTo("#score-form").done();
     });
 
 });
