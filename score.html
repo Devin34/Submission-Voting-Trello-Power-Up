@@ -8,31 +8,17 @@
       }
     </style>
     <script src="https://p.trellocdn.com/power-up.min.js"></script>
-    <script src="score.js"></script>
   </head>
   <body>
-
-      <form id="scoreform">
-        
-        <label for="scoreselect">Score:</label>
-        <select id="scoreselect">
-
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-
-        </select>
-        
-
-
-        <button type="submit" class="mod-primary">Save</button>
-      </form>
+    <form id="estimate">
+      <label for="estimateSize">Estimate:</label>
+      <select name="size" id="estimateSize">
+        <option value="small">Small 👕</option>
+        <option value="medium">Medium 👚</option>
+        <option value="large">Large 👔</option>
+        <option value="x-large">Extra Large 👖</option>
+      </select>
+      <button type="submit" class="mod-primary">Save</button>
+    </form>
   </body>
 </html>

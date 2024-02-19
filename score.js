@@ -1,25 +1,21 @@
-/* global TrelloPowerUp */
+ar t = TrelloPowerUp.iframe();
 
-var t = TrelloPowerUp.iframe();
-
-document.getElementById("scoreform").addEventListener("submit", function (event) {
+window.estimate.addEventListener("submit", function (event) {
   event.preventDefault();
   return t
-    .set("card", "shared", "score", document.getElementById("scoreselect").value)
+    .set("card", "shared", "estimate", window.estimateSize.value)
     .then(function () {
       t.closePopup();
     });
 });
 
 t.render(function () {
-
   return t
-    .get("card", "shared", "score")
-    .then(function (data) {
-      document.getElementById("scoreselect").value = data;
+    .get("card", "shared", "estimate")
+    .then(function (estimate) {
+      window.estimateSize.value = estimate;
     })
     .then(function () {
-      t.sizeTo("#scoreform").done();
+      t.sizeTo("#estimate").done();
     });
-
 });
