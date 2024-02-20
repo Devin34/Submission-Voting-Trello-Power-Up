@@ -40,13 +40,23 @@
       },
 
       'card-detail-badges': function (t, options) {
-        return [
-          {
-            title: 'Estimate',
-            color: 'red',
-            text: 'Large',
-          },
-        ];
+
+        return t.member("username").then(function (username) {
+
+          return [
+            {
+              title: 'Estimate',
+              color: 'red',
+              text: 'Large',
+            },
+          ];
+
+        });
+
+
+
+
+
       },
 
 
