@@ -17,7 +17,7 @@ t.render(function () {
   return t
     .card("id")
     .then(function(cardID) {
-      //cardIDString = JSON.stringify(cardID.id);
+      console.log(JSON.stringify(cardID.id));
     
     })
     .get("member", "shared", "cardIDString")
