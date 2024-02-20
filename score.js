@@ -25,7 +25,7 @@ t.render(function () {
 
     t.get("member", "shared", cardID.id)
       .then(function (score) {
-        console.log(score);
+        console.log(JSON.stringify(score));
         window.scoreselect.value = score;
 
       }).done();
