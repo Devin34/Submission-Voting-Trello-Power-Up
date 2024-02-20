@@ -13,7 +13,7 @@ window.scoreform.addEventListener("submit", function (event) {
     t.get("member", "shared", "cardID.id")
     .then(function (score) {
 
-      console.log(score)
+      console.log(score);
 
     }).done();
 
