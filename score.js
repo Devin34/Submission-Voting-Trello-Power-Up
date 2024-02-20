@@ -23,7 +23,7 @@ t.render(function () {
     .get("member", "shared", "cardIDString")
     .then(function (score) {
       window.scoreselect.value = score;
-      console.log(cardIDString);
+      //console.log(cardIDString);
     })
     .then(function () {
       t.sizeTo("#scoreform").done();
