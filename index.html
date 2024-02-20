@@ -44,20 +44,20 @@
         return t.member("username").then(function (username) {
 
 
-          t.card("id").then(function (cardID) {
-
-            
-            return [
-                  {
-                    title: 'title',
-                    color: 'red',
-                    text: 'test text',
-                  },
-                ];
 
 
 
-          });
+          return [
+            {
+              title: 'title',
+              color: 'red',
+              text: username.username,
+            },
+          ];
+
+
+
+
 
 
 
