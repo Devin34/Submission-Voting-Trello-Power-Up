@@ -43,19 +43,31 @@
 
         return t.member("username").then(function (username) {
 
-          return [
-            {
-              title: username.username,
-              color: 'red',
-              text: 'Large',
-            },
-          ];
+
+          t.card("id").then(function (cardID) {
+
+
+            t.get("member", "shared", cardID.id)
+              .then(function (score) {
+
+                return [
+                  {
+                    title: "title",
+                    color: 'red',
+                    text: username.username.concat(": ", score),
+                  },
+                ];
+              });
+
+
+
+          });
+
+
+
+
 
         });
-
-
-
-
 
       },
 
