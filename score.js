@@ -16,8 +16,12 @@ window.scoreform.addEventListener("submit", function (event) {
 t.render(function () {
 
   var ID = t.card("id").then(function(cardID) {
-    console.log(cardID.id);
+
+    return cardID.id;
+    //console.log(cardID.id);
   })
+
+  console.log(ID);
 
   return t
     .get("member", "shared", "score")
