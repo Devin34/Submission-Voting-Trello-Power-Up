@@ -29,57 +29,14 @@
       },
 
 
-      
-      'card-badges': function (t, options) {
 
-/*
-        return t.card("id").then(function (cardID) {
-
-
-          t.get("member", "shared", cardID.id)
-            .then(function (score) {
-
-
-              t.member("username")
-                .then(function (username) {
-
-                  console.log("HEEELLLLOOOOO");
-
-                  return [{
-                    icon: "https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717",
-                    text: "test",
-                    //color: estimate ? null : 'red',
-                  }];
-
-                });
-
-
-
-            })
-            .then(function () {
-
-              //t.get("member", "shared", cardID.id).then(function (score) { console.log(score); });
-
-            });
-
-
-        });
-
-        */
-
-
-
-        
-        return t.get('member', 'shared', 'estimate')
-          .then(function (estimate) {
-            return [{
-              icon: "https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717",
-              text: estimate || 'No Estimate!',
-              color: estimate ? null : 'red',
-            }];
-          });
-          
-
+      "card-badges": function (t, options) {
+        return [
+          {
+            icon: "https://cdn.glitch.com/c69415fd-f70e-4e03-b43b-98b8960cd616%2Frocket-ship-grey.png?1496162964717",
+            text: "3",
+          },
+        ];
       },
 
 
