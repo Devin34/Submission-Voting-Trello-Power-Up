@@ -37,7 +37,7 @@ t.render(function () {
 
   
       t.get("member", "shared", cardID.id)
-      .then(function (score) { console.log(score); })
+      .then(function (score) { window.scoreselect.value = score; console.log(score); })
       .then(function () {
   
         //t.get("member", "shared", cardID.id).then(function (score) { console.log(score); });
