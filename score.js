@@ -16,7 +16,7 @@ window.scoreform.addEventListener("submit", function (event) {
 t.render(function () {
 
   var ID = t.card("id").then(function(cardID) {
-    console.log(JSON.stringify(cardID));
+    console.log(JSON.stringify(cardID.id));
   })
 
   return t
