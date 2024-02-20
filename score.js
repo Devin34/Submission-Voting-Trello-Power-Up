@@ -10,20 +10,15 @@ window.scoreform.addEventListener("submit", function (event) {
 
     .card("id")
     .then(function (cardID) { t.set("member", "shared", cardID.id, window.scoreselect.value)})
+    .get("member", "shared", cardID.id)
+    .then(function (score) {console.log(score);})
     .then(function () { t.closePopup();});
 
 });
 
 t.render(function () {
 
-  return t
-
-  .card("id")
-  .then(function (cardID) {
-
-    t.get("member", "shared", cardID.id, "1").then(function (score) {console.log(score);});
-    
-    }).then(function () {t.sizeTo("#scoreform").done();});
+  return t.sizeTo("#scoreform").done();
   
   
 });
