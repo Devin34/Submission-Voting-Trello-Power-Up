@@ -1,13 +1,13 @@
 /* global TrelloPowerUp */
 
 var t = TrelloPowerUp.iframe();
-
+var cardIDString;
 
 
 window.scoreform.addEventListener("submit", function (event) {
   event.preventDefault();
   return t
-    .set("member", "shared", "score", window.scoreselect.value)
+    .set("member", "shared", cardIDString, window.scoreselect.value)
     .then(function () {
       t.closePopup();
     });
@@ -16,10 +16,10 @@ window.scoreform.addEventListener("submit", function (event) {
 t.render(function () {
   return t
     .card("id")
-    .then(function(cardidvalue) {
-      console.log(JSON.stringify(cardidvalue.id));
+    .then(function(cardID) {
+      cardIDString = JSON.stringify(cardID.id);
     })
-    .get("member", "shared", "score")
+    .get("member", "shared", cardIDString)
     .then(function (score) {
       window.scoreselect.value = score;
       
