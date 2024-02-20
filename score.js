@@ -2,6 +2,7 @@
 
 var t = TrelloPowerUp.iframe();
 
+var state = false;
 
 
 window.scoreform.addEventListener("submit", function (event) {
@@ -14,7 +15,9 @@ window.scoreform.addEventListener("submit", function (event) {
     .then(function () { console.log("I RUN"); })
     .then(function () {
 
-      t.get("member", "shared", cardID.id).then(function (score) { console.log(score); });
+
+      state = true;
+      //t.get("member", "shared", cardID.id).then(function (score) { console.log(score); });
 
     });
  
@@ -28,7 +31,33 @@ window.scoreform.addEventListener("submit", function (event) {
 
 t.render(function () {
 
-  return t.sizeTo("#scoreform").done();
+
+  if (state = true) {
+    t.card("id").then(function (cardID) {
+
+  
+      t.get("member", "shared", cardID.id)
+      .then(function (score) { console.log(score); })
+      .then(function () {
+  
+        //t.get("member", "shared", cardID.id).then(function (score) { console.log(score); });
+  
+      });
+   
+    
+    });
+
+    return t.sizeTo("#scoreform").done();
+
+  } else {
+
+    return t.sizeTo("#scoreform").done();
+
+  }
+
+
+
+
 
 
 });
