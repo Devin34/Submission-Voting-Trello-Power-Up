@@ -7,8 +7,9 @@ var t = TrelloPowerUp.iframe();
 window.scoreform.addEventListener("submit", function (event) {
   event.preventDefault();
 
-  return t.card("id").then(function (cardID) { t.set("member", "shared", cardID.id, window.scoreselect.value).then(function () {console.log("I RUN");})});
+    t.card("id").then(function (cardID) { t.set("member", "shared", cardID.id, window.scoreselect.value).then(function () {console.log("I RUN");})});
 
+    return t;
   /*
   return t
   .card("id")
