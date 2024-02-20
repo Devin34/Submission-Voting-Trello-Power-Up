@@ -18,7 +18,10 @@ t.render(function () {
     .get("member", "shared", "score")
     .then(function (score) {
 
-      console.log(typeof t.card("id").id);
+      var key;
+      t.card("id").then(function (cardID) { key = cardID.id}).done()
+
+      console.log(typeof key);
 
       window.scoreselect.value = score;
 
