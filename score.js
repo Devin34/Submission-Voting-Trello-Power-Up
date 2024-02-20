@@ -9,8 +9,8 @@ window.scoreform.addEventListener("submit", function (event) {
   return t.card("id").then(function (cardID) {
     
     //t.set("member", "shared", cardID.id, window.scoreselect.value).done();
-    t.set("member", "shared", cardID.id, 5).done();
-    t.get("member", "shared", cardID.id)
+    t.set("member", "shared", "cardID.id", 5).done();
+    t.get("member", "shared", "cardID.id")
     .then(function (score) {
 
       console.log(score)
