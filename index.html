@@ -47,7 +47,7 @@
           t.card("id").then(function (cardID) {
 
 
-            t.get("member", "shared", cardID.id)
+            t.get("member", "shared", cardID.id, "N/A")
               .then(function (score) {
 
                 return [
