@@ -46,6 +46,7 @@
 
           t.card("id").then(function (cardID) {
 
+            console.log("IS ANYBODY THERE?");
 
             t.get("member", "shared", cardID.id, "N/A")
               .then(function (score) {
@@ -70,8 +71,6 @@
         });
 
       },
-
-
 
 
     });
