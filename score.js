@@ -15,19 +15,14 @@ window.scoreform.addEventListener("submit", function (event) {
 
 t.render(function () {
 
-  var ID = t.card("id").then(function(cardID) {
+  return t.card("id").then(function(cardID) {
 
-    return cardID.id;
-    //console.log(cardID.id);
-  })
-
-  console.log(ID);
-
-  return t
-    .get("member", "shared", "score")
+    t.get("member", "shared", "score")
     .then(function (score) {
       window.scoreselect.value = score;
       
+    }).done();
+
     })
     .then(function () {
       t.sizeTo("#scoreform").done();
