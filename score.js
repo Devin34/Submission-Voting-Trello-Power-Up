@@ -7,21 +7,19 @@ var t = TrelloPowerUp.iframe();
 window.scoreform.addEventListener("submit", function (event) {
   event.preventDefault();
 
-    t.card("id").then(function (cardID) { t.set("member", "shared", cardID.id, window.scoreselect.value).then(function () {console.log("I RUN");})});
+  t.card("id").then(function (cardID) { t.set("member", "shared", cardID.id, window.scoreselect.value).then(function () { console.log("I RUN"); }) });
 
-    return t;
-  /*
-  return t
-  .card("id")
-  .then(function (cardID) { t.get("member", "shared", cardID.id).then(function (score) {console.log(score);})})
-  .then(function () { t.closePopup();});
-  */
+  t.card("id")
+    .then(function (cardID) { t.get("member", "shared", cardID.id).then(function (score) { console.log(score); }) });
+
+  return t;
+
 
 });
 
 t.render(function () {
 
   return t.sizeTo("#scoreform").done();
-  
-  
+
+
 });
