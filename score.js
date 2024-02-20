@@ -21,9 +21,8 @@ t.render(function () {
 
   return t.card("id").then(function (cardID) {
 
-    console.log(typeof cardID.id);
 
-    t.get("member", "shared", JSON.stringify(cardID.id))
+    t.get("member", "shared", cardID.id, "1")
       .then(function (score) {
 
         window.scoreselect.value = score;
