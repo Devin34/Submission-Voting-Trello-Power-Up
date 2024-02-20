@@ -19,7 +19,7 @@ t.render(function () {
     .then(function (score) {
 
       var key;
-      t.card("id").then(function (cardID) { key = cardID.id}).done()
+      t.card("id").then(function (cardID) { key = cardID.id}).done();
 
       console.log(typeof key);
 
