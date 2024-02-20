@@ -10,7 +10,14 @@ window.scoreform.addEventListener("submit", function (event) {
   t.card("id").then(function (cardID) {
 
   
-    t.set("member", "shared", cardID.id, window.scoreselect.value).then(function () { console.log("I RUN"); }).get("member", "shared", cardID.id).then(function (score) { console.log(score); }); 
+    t.set("member", "shared", cardID.id, window.scoreselect.value)
+    .then(function () { console.log("I RUN"); })
+    .then(function () {
+
+      t.get("member", "shared", cardID.id).then(function (score) { console.log(score); });
+
+    });
+ 
   
   });
 
