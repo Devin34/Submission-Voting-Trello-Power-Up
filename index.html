@@ -19,6 +19,9 @@
             icon: "https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421",
             text: "Give Score",
             callback: function (t) {
+
+              t.list("cards").then(function (cards) {console.log(cards)});
+
               return t.popup({
                 title: "Provide a Score Between 1-10",
                 url: "score.html",
