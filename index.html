@@ -20,7 +20,20 @@
             text: "Give Score",
             callback: function (t) {
 
-              t.list("cards").then(function (cards) {console.log(cards)});
+              console.log("Testing");
+              t.list("cards").then(function (cards) 
+              {
+
+                cards.array.forEach(function (value) {
+
+                  console.log(value.name);
+
+                });
+                  
+                
+                
+              
+              });
 
               return t.popup({
                 title: "Provide a Score Between 1-10",
